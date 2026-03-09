@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-collor-deployment
+  labels:
+    app: image-collor
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: image-collor
+  template:
+    metadata:
+      labels:
+        app: image-collor
+    spec:
+      containers:
+        - name: image-collor
+          image: jldevops01/image-collor:v1.0.5 
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
