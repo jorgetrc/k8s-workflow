@@ -8,4 +8,4 @@ resources:
 images:
 - name: jldevops01/image-collor
   newName: jldevops01/image-collor
-  newTag: v1.0.6
+  newTag: v1.0.7
