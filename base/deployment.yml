@@ -4,6 +4,7 @@ metadata:
   name: image-collor-deployment
   labels:
     app: image-collor
+  namespace: image-collor
 spec:
   replicas: 2
   selector:

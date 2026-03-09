@@ -4,11 +4,12 @@ metadata:
   name: image-collor-service
   labels:
     app: image-collor
+  namespace: image-collor
 spec:
-  type: ClusterIP # Mantemos ClusterIP para comunicação interna padrão
+  type: ClusterIP 
   selector:
-    app: image-collor # Este seletor deve bater exatamente com a label do Deployment
+    app: image-collor 
   ports:
     - protocol: TCP
-      port: 80 # Porta exposta pelo Service
-      targetPort: 80 # Porta em que o container está escutando
+      port: 80 
+      targetPort: 80
